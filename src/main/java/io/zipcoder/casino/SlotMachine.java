@@ -39,7 +39,7 @@ public class SlotMachine extends Game implements Gamble {
                 if(proceedToSpinCheck(console.getIntInput(), player)) {
                     scoreResults(player);
                     decreaseSpinsOnMultiplier();
-                    payOut(player);
+                    //payOut(player);
                     increaseJackpot();
                 }else{
                     break;
