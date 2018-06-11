@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Casino {
     private Player[] players;
-    //Game gameBeingPlayed;
     private Scanner scanner;
 
     public void main() {
@@ -19,8 +18,6 @@ public class Casino {
         for (int i = 0; i < players.length; i++) {
             players[i] = createPlayer();
         }
-
-        System.out.println(players.toString());
 
         playGame();
     }
@@ -52,7 +49,7 @@ public class Casino {
         if (input.equalsIgnoreCase("blackjack")) game = new BlackJack(players);
         else if (input.equalsIgnoreCase("knockout")) game = new KnockOut(players);
         else if (input.equalsIgnoreCase("memory")) game = new MemoryGame(2, players, 4);
-        //else if (input.equalsIgnoreCase("slots")) game = new SlotMachine(players);
+        else if (input.equalsIgnoreCase("slots")) game = new SlotMachine(players);
         else {
             System.out.println("Game not recognized, how about some Knockout!");
             game = new KnockOut(players);
