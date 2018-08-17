@@ -85,6 +85,7 @@ public class MemoryGame extends Game  {
             Card n1 = cardList.get(pos1);
             if (n1 == null) {
                 memConsole.println("Your position is already taken,please enter a new postion");
+
                 continue;
             }
 
